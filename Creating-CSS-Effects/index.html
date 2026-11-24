@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Effects</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f2f6ff;
+      padding: 60px 20px;
+    }
+
+    .card {
+      max-width: 400px;
+      margin: auto;
+      padding: 35px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px #aaa;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px #888;
+    }
+
+    button {
+      padding: 12px 24px;
+      color: white;
+      background: #2878d0;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    button:hover {
+      background: #15549b;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>CSS Effects</h1>
+    <p>Move your mouse over the card and button to see the effects.</p>
+    <button>Hover over me</button>
+  </div>
+</body>
+</html>
