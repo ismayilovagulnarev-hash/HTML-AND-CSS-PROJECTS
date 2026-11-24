@@ -4,30 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS Effects</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
     body {
-      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 50px 20px;
+      font-family: "Poppins", sans-serif;
       text-align: center;
       background: #f2f6ff;
-      padding: 60px 20px;
+      color: #24324a;
     }
 
     .card {
-      max-width: 400px;
+      max-width: 500px;
       margin: auto;
-      padding: 35px;
+      padding: 25px;
       background: white;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px #aaa;
-      transition: transform 0.3s, box-shadow 0.3s;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px #bbb;
     }
 
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 12px 25px #888;
+    .photo {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .photo img {
+      display: block;
+      width: 100%;
+      transition: transform 0.4s, opacity 0.4s;
+    }
+
+    .photo:hover img {
+      transform: scale(1.1);
+      opacity: 0.7;
+      width:300px;
+      border-radius:100%:
+    }
+
+    .photo span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: white;
+      font-size: 24px;
+      font-weight: 700;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.4s;
+    }
+
+    .photo:hover span {
+      opacity: 1;
     }
 
     button {
+      margin-top: 20px;
       padding: 12px 24px;
       color: white;
       background: #2878d0;
@@ -46,7 +83,13 @@
 <body>
   <div class="card">
     <h1>CSS Effects</h1>
-    <p>Move your mouse over the card and button to see the effects.</p>
+    <p>Move your mouse over the image and button to see the effects.</p>
+
+    <div class="photo">
+      <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=80" alt="Mountain landscape">
+      <span>Beautiful View</span>
+    </div>
+
     <button>Hover over me</button>
   </div>
 </body>
